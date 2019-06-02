@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,IAAI,AAAC,CACH,gBAAgB,CCHF,IAAO,CDItB",
+    "sources": [
+        "../../scss/powercss.scss",
+        "../../scss/_variables.scss"
+    ],
+    "names": [],
+    "file": "powercss.min.css"
+}
