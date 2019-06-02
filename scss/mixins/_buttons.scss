@@ -1,0 +1,28 @@
+@mixin button-variant($background) {
+  background-color: $background;
+
+  &:hover {
+    background-color: darken($background, 5%);
+  }
+
+  &:focus,
+  &.focus {
+    background-color: darken($background, 5%);
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    background-color: lighten($background, 5%);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    background-color: darken($background, 5%);
+
+    &:focus {
+      background-color: darken($background, 5%);
+    }
+  }
+}

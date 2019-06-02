@@ -1,6 +1,13 @@
 
+// heplers
+@import "helpers/variables";
 
-@import "variables";
+// mixins
+@import "mixins/buttons";
+
+// components
+@import "components/buttons";
+
 
 body {
   background-color: $primary-color;

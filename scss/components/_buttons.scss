@@ -1,0 +1,44 @@
+
+
+
+.btn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: .7;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    box-shadow: 0 3px rgba(black, .16);
+
+    &:focus {
+      box-shadow: 0 3px rgba(black, .16);
+    }
+  }
+}
+
+
+@each $key, $color in $theme-colors {
+  .btn-#{$key} {
+    @include button-variant($color);
+  }
+}
